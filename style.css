@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&display=swap');
+/* Shirak Soghomonian 2022 10 29  */
+:root{
+    --color: #ff8c00;
+}
+
+
+*{
+    box-sizing: border-box;
+    font-size: 16px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background:radial-gradient(rgb(37, 55, 91), rgb(0, 6, 18)); 
+    
+}
+
+.Main{
+    display: flex;
+    position: relative;
+    
+    
+    
+}
+.Main h1{
+    cursor:none;
+    color:var(--color);
+    font-size: 3rem;
+    font-family: 'Balsamiq Sans';
+    text-shadow:
+    0 0 .5rem currentColor,
+    0 0 .6rem currentColor;
+    animation:  example 3s linear  infinite alternate ;
+
+}
+
+.Main h1:before{
+    content:'';
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    height: 3rem;
+    background: var(--color);
+    transform: perspective(3rem) rotateX(40deg)  scale(1,0.45);
+    filter: blur(2rem);
+    opacity: .8;
+   animation:  example 3s linear  infinite alternate ;
+}
+
+.Main h1:after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color);
+    z-index: -1;
+    filter: blur(4rem);
+    opacity: .3;
+    animation:  example 3s linear  infinite alternate ;
+}
+
+
+@keyframes example {
+0%{--color: #ffab43;}
+25%{--color: #3fa6ff;}
+50%{--color: #ff4949;}
+75%{--color: #ff5edf;}
+100%{--color: #adfe4a;}
+}
+
+.Main h1::selection{
+   display: none;
+}
